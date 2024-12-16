@@ -1,0 +1,5 @@
+[console_scripts]
+landscape_projection = OrientationLandscape.LandscapeProjection:main
+orientation_analysis = OrientationLandscape.OrientationAnalysis:main
+particle_backtrack = OrientationLandscape.ParticleBacktrack:main
+point_select = OrientationLandscape.PointSelect:main
