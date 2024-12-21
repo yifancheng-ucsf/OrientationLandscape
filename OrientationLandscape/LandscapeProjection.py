@@ -142,7 +142,7 @@ def main():
         rnd_threshold = data['RND'].quantile(1 - percentage)
         rnd_threshold = math.ceil(rnd_threshold * 10) / 10
         print(f"RND threshold based on top {percentage * 100}%: {rnd_threshold}")
-    elif args.threshold is not None:
+    elif args.threshold_based_on_RND is not None:
         rnd_threshold = args.threshold_based_on_RND
         print(f"Using fixed RND threshold: {rnd_threshold}")
     else:
@@ -176,8 +176,8 @@ def main():
     plot_histogram(data, 'Rotation_Angle', args.bins, histogram_threshold_output_filename)
     plot_histogram(data, 'Distance', args.bins, histogram_threshold_output_filename)
 
-    plot_histogram(data_orignial, 'Rotation_Angle', args.bins, histogram_all_output_filename)
-    plot_histogram(data_orignial, 'Distance', args.bins, histogram_all_output_filename)
+    plot_histogram(data_original, 'Rotation_Angle', args.bins, histogram_all_output_filename)
+    plot_histogram(data_original, 'Distance', args.bins, histogram_all_output_filename)
 
     # Plot projections of Euler angles
     euler_columns = ['Alpha', 'Beta', 'Gamma']

@@ -264,9 +264,9 @@ def main():
 
         idx = i
         data_before = {
-            'Alpha': euler_angles[0],
-            'Beta': euler_angles[1],
-            'Gamma': euler_angles[2],
+            'Alpha': euler_angles[0] * -1,
+            'Beta': euler_angles[1] * -1,
+            'Gamma': euler_angles[2] * -1,
             'RotVec_X': rotvec[0],
             'RotVec_Y': rotvec[1],
             'RotVec_Z': rotvec[2],
@@ -371,7 +371,7 @@ def main():
 
         # Save before-alignment CSV
         output = args.output
-        output_csv_before = f"{output}_before_alignment.csv"
+        output_csv_before = f"{output}.csv"
         df_before_non_outliers.to_csv(output_csv_before, sep='\t', index=False)
         print(f"Data before alignment saved to {output_csv_before}")
 
@@ -431,7 +431,7 @@ def main():
         gc.collect()
 
     comm.Barrier()
-    # MPI.Finalize()
+    # MPI will finalize automatically when the script ends, freeing memory.
 
 if __name__ == '__main__':
     main()
