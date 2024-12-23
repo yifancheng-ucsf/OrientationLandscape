@@ -123,6 +123,11 @@ Below is a brief usage summary for each of the four scripts. See the --help text
 > \--p: Percentage-based threshold (e.g., “keep top X% of RND”).
 > - If neigher --t nor --p is set, the program defaults to use the value (RND\_max/3) to be the RND threshold.
 
+> \--angle_limits: Limits for Euler angles: Euler01_min Euler01_max Euler02_min Euler02_max Euler03_min Euler03_max. default=[-180.0, 180.0, -180.0, 180.0, -180.0, 180.0]
+
+> \--rotvec_limits: Limits for Rotation vectors: RotVec_X_min RotVec_X_max RotVec_Y_min RotVec_Y_max RotVec_Z_min RotVec_Z_max.',default=[-3.14, 3.14, -3.14, 3.14, -3.14, 3.14]
+  
+
 > \--generate\_azimuth\_elevation: If set, computes Azimuth/Elevation from rotation vectors and plots them.
 
 #### point\_select
