@@ -88,7 +88,7 @@ Below is a brief usage summary for each of the four scripts. See the --help text
 
 > \--k: Number of nearest neighbors for RND calculation (default = 30).
 
-> \--autoalign: If set, computes and applies IMR alignment, producing “\_before\_alignment.csv” and “\_after\_alignment.csv”.
+> \--autoalign: If set, computes and applies IMR alignment, producing additional “\_after\_alignment.csv”.
 
 > \--apply\_rotation: Apply a known rotation (ROT, TILT, PSI) to all particles before processing.
 
